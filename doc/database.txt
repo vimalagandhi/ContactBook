@@ -1,0 +1,103 @@
+
+CREATE SCHEMA common;
+
+
+ALTER SCHEMA common OWNER TO postgres;
+
+
+-- Table: common.myaccount
+
+-- DROP TABLE common.myaccount;
+
+CREATE TABLE common.myaccount
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    email text COLLATE pg_catalog."default" NOT NULL,
+    password text COLLATE pg_catalog."default" NOT NULL,
+    created_at timestamp with time zone DEFAULT now(),
+    created_by text COLLATE pg_catalog."default",
+    last_modified_at timestamp with time zone,
+    last_modified_by text COLLATE pg_catalog."default",
+    CONSTRAINT myaccount_pkey PRIMARY KEY (email)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE common.myaccount
+    OWNER to postgres;
+
+-- Index: idx_myaccount__email
+
+-- DROP INDEX common.idx_myaccount__email;
+
+CREATE INDEX idx_myaccount__email
+    ON common.myaccount USING btree
+    (email COLLATE pg_catalog."default" ASC NULLS LAST)
+    TABLESPACE pg_default;
+
+
+    -- Table: common.mycontacts
+
+-- DROP TABLE common.mycontacts;
+
+CREATE TABLE common.mycontacts
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    fullname text COLLATE pg_catalog."default" NOT NULL,
+    email text COLLATE pg_catalog."default" NOT NULL,
+    phone text COLLATE pg_catalog."default" NOT NULL,
+    company text COLLATE pg_catalog."default" NOT NULL,
+    address text COLLATE pg_catalog."default" NOT NULL,
+    created_at timestamp with time zone DEFAULT now(),
+    created_by text COLLATE pg_catalog."default",
+    last_modified_at timestamp with time zone,
+    last_modified_by text COLLATE pg_catalog."default",
+    account text COLLATE pg_catalog."default",
+    CONSTRAINT mycontacts_pkey PRIMARY KEY (email),
+    CONSTRAINT fk_mycontacts__account FOREIGN KEY (account)
+        REFERENCES common.myaccount (email) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE common.mycontacts
+    OWNER to postgres;
+
+-- DROP INDEX common.idx_mycontacts__account;
+
+CREATE INDEX idx_mycontacts__account
+    ON common.mycontacts USING btree
+    (account COLLATE pg_catalog."default" ASC NULLS LAST)
+    TABLESPACE pg_default;
+-- Index: idx_mycontacts__email
+
+-- DROP INDEX common.idx_mycontacts__email;
+
+CREATE INDEX idx_mycontacts__email
+    ON common.mycontacts USING btree
+    (email COLLATE pg_catalog."default" ASC NULLS LAST)
+    TABLESPACE pg_default;
+
+
+    -- Table: common.messages
+
+-- DROP TABLE common.messages;
+
+CREATE TABLE common.messages
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    email text COLLATE pg_catalog."default" NOT NULL,
+    receiced_message text COLLATE pg_catalog."default",
+    account text COLLATE pg_catalog."default",
+    created_at timestamp with time zone DEFAULT now(),
+    created_by text COLLATE pg_catalog."default",
+    last_modified_at timestamp with time zone,
+    last_modified_by text COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE common.messages
+    OWNER to postgres;

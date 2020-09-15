@@ -1,0 +1,200 @@
+﻿body {
+  /* background-color: lightgray; */
+
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco,
+    HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Segoe UI,
+    Fira Sans, Roboto, Oxygen, Ubuntu, Droid Sans, Arial, sans-serif;
+  /* background-color: #ffffff; */
+  font-size: 14px;
+}
+
+body .p-selectbutton .p-button .p-highlight {
+  background-color: #3377ff;
+  border-color: #3377ff;
+  color: #ffffff;
+}
+
+tbody,
+thead {
+  font-size: 12px;
+}
+label {
+  font-size: 12px !important;
+  font-family: "Open Sans";
+}
+.p-component  {
+  /* border: none !important;
+border-bottom: 1px solid lightgrey !important; */
+  font-weight: bold;
+}
+
+.p-dropdown-trigger-icon  {
+  color: lightgrey;
+}
+
+body .p-dropdown-panel .p-dropdown-filter-container .p-dropdown-filter-icon {
+  margin-right: 15px;
+}
+/* .p-button  {
+  width: 120px !important;
+} */
+
+.p-dropdown,
+.p-inputtext,
+.p-calendar {
+  width: 90% !important;
+  min-width: 60% !important;
+}
+
+.p-menu.p-menu-overlay {
+  width: 100px;
+}
+
+.p-calendar > .p-inputtext {
+  border: none;
+}
+
+.layout-topbar-item-text {
+  font-size: 26px !important;
+}
+
+.p-chips {
+  width: 90% !important;
+}
+.p-chips > .p-inputtext {
+  border: none;
+}
+.display-header {
+  background-color: #efefef !important;
+  border-radius: 2px;
+  border: 1px ridge #5a5a5a;
+  color: #504a4a;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px; 
+}
+
+.display-header h5 {
+  color: #5a5a5a !important;
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+.header-label {
+  font-size: 14px;
+  margin-bottom: -5px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.header-field {
+  font-size: 14px;
+  margin-left: 10px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.p-dropdown-trigger-icon,
+.p-multiselect-trigger-icon {
+  color: #cecece;
+}
+
+.p-dropdown,
+.p-inputtext,
+.p-inputtextarea,
+.p-multiselect-label {
+  font-weight: bold !important;
+}
+
+.react-datepicker-wrapper input {
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  background-color: #fafafa;
+  border-radius: 3px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.p-tabview.p-tabview-top > .p-tabview-nav li {
+  font-size: 11px;
+}
+form > h3 {
+  margin-top: -5px;
+}
+summary {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .p-md-4 {
+    padding: 0.3rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .p-lg-4 {
+    padding: 0.3rem !important;
+  }
+}
+
+body .p-megamenu {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  /* -webkit-border-radius: 3px; */
+  /* border-radius: 3px; */
+  /* width: fit-content; */
+}
+
+/* .p-menuitem-text {
+  color: #000000 ;
+  font-weight: bold;
+} */
+
+body .p-accordion .p-accordion-header a {
+  padding: 0.571em 1em;
+  border: none;
+  color: #333333;
+  background-color: transparent;
+
+  font-weight: 700;
+}
+
+.p-tooltip {
+  font-size: 12px;
+}
+
+.label {
+  color: white;
+  padding: 5px;
+  font-family: Arial;
+}
+.success {
+  background-color: #4caf50;
+} /* Green */
+.eEqJio {
+  max-width: 350px !important;
+  margin-bottom: 7px;
+  min-width: 300px !important;
+}
+.smooth-dnd-draggable-wrapper {
+  max-width: 310px !important;
+  min-width: 310px !important;
+}
+
+.react-tel-input {
+  width: 90% !important;
+  font-weight: bold !important;
+}
+
+.react-tel-input .form-control {
+  border: none !important;
+
+  width: auto !important;
+}
+
+.header-center {
+  text-align: center;     /* will center text in <p>, which is not a flex item */
+}

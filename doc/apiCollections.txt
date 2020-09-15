@@ -1,0 +1,16 @@
+
+
+/api/common/insert/mycontacts
+
+/api/common/get/DisplayMessages/${fetchId}
+
+/api/common/get/DisplayMsg/${props.acc}/${fetchId}
+
+/api/common/get/DisplayContacts/${fetchId}
+
+/api/common/get/mycontacts/${validUser.user.email}
+
+/api/common/delete/mycontact/${deleteId}
+
+/api/common/insert/messages
+
